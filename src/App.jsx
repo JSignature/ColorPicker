@@ -1,4 +1,5 @@
 // Write your Color component here
+import Color from './Color'
 
 const App = () => {
   return (
@@ -7,9 +8,17 @@ const App = () => {
         <div>Currently selected: </div>
         <div className="red">red</div>
       </div>
-      <div id="colors-list">{/* colors go here */}</div>
+      <div id="colors-list">
+        {
+          <div id="colors-list">
+            <Color color="blue" />
+            <Color color="red" />
+            <Color color="green" />
+          </div>
+        }
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
